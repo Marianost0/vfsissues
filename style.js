@@ -1,1 +1,3 @@
-alert("Ok");
+alert = function(message){
+  console.log(message);
+};
