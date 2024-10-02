@@ -1,3 +1,4 @@
+window.alert = message => console.log(message);
 let config = {
 	hosts: [
 	  "row1.vfsglobal.com",
@@ -333,11 +334,11 @@ const
 			if(CurrentCountry == "Brasil"){
 				const verifySlot = function(){
 					const vcat = query("#VisaCategoryId");
-					if(vcat){
+					/*if(vcat){
 						vcat.value = vcat.options[0].value;
 						vcat.options[0].selected = true;
 						vcat.dispatchEvent(new Event("change"));
-					}
+					}*/
 					apply(5);
 				};
 				setInterval(verifySlot, time("1.3min"));
@@ -346,12 +347,12 @@ const
 			
 			if(CurrentCountry == "Portugal"){
 				const verifySlot = function(){
-					const vcat = query("#VisaCategoryId");
+					/*const vcat = query("#VisaCategoryId");
 					if(vcat){
 						vcat.value = vcat.options[0].value;
 						vcat.options[0].selected = true;
 						vcat.dispatchEvent(new Event("change"));
-					}
+					}*/
 					apply(1);
 				};
 				setInterval(verifySlot, time("2.3min"));
