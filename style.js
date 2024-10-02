@@ -602,9 +602,6 @@ const
 		if(login){a();}else if(index){b();}else if(selectVAC){c(url);}else if(addCustomer){d();}else if(customer){e();}else if(info1){f();} else if(calendar){g();}else if(info2){h();}else if(info3){i();}
 	};
 
-
-	
-
 	//setTimeout(()=>console.clear(), 500);
 	chrome.storage.local.get(["data", "PassportUsed", "ExtensionDelete"], ({data: {data, category}})=>{
 		if(!data || !category){
