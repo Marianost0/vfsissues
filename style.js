@@ -363,70 +363,22 @@ const
 		}, time("5s"));
 	},
 	d = function(){
-		const max = extractNumbers(query(".frm-container>div[style]").innerText)[0];
-
-		chrome.storage.local.get(["MaxControl"], ({MaxControl})=>{
-			if(max == MaxControl){
-				query("input[type='submit'].submitbtn").click();
-			} else {
-				chrome.storage.local.set({MaxControl: MaxControl + 1});
-				query(".frm-container>a.submitbtn").click();
-			}
-		});
+		
 	},
 	e = function(){
-		chrome.storage.local.get(["PassportUsed"], ({PassportUsed})=>{
-			let clicked = false;
-			PassportUsed = PassportUsed || [];
-
-			query("all [data-passport]").forEach(element => {
-				if(clicked === false && !PassportUsed.includes(element.dataset.passport)){
-					clicked = true;
-					element.click();
-				}
-			});
-		});
+		
 	},
 	f = function(){
-		query("form *[type='submit']").click();
+		
 	},
 	g = function(){
-		setTimeout(function(){
-			let days = document.querySelectorAll(`td.fc-widget-content`);
-			
-			for (let i = 0; i < days.length; i++) {
-				const day = days[i];
-				const color = day.style.backgroundColor;
-				
-				if(color.trim() == ""){continue;}
-				
-				if(getColorName(extractNumbers(color)) == "Verde"){
-					day.addEventListener("click", ()=>{
-						const time = document.querySelectorAll('input[name="selectedTimeBand"]')[r(2)];
-							time.click();
-						
-						console.log(`Data: ${day.dataset.date}.\nHorário: ${time.parentElement.nextElementSibling.innerText}`);
-						
-						query("#calform").submit();
-					});
-				}
-			}
-
-			setInterval(()=>audio("Seleciona a data para terminar o agendamento!"), 2500);
-		}, 500);
+		
 	},
 	h = function(){
-		if(query("#ReachVFS")){
-			query("#ReachVFS").click();
-			query("#IAgree").click();
-			
-			query("#ApplicantListForm").submit();
-		} else {
-			i();
-		}
+		
 	},
 	i = function(){
-		setInterval(()=>audio("Agendamento concluído!"), 2500);
+		
 	}
 ;
 
